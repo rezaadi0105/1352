@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Slopkit Exploit</title>
+    <title>Slopkit Exploit By Reza A.P</title>
     <style>
         body {
             background: #ffffff;
@@ -79,7 +79,7 @@
     }
 
     if (!supported) {
-        print("UNSUPPORTED FIRMWARE — tap / press X to run anyway", "bad");
+        print("UNSUPPORTED FIRMWARE — tap / press OK to run anyway", "bad");
         waitForTap("", go);
         return;
     }
@@ -96,7 +96,7 @@
     } else if (ac.status === ac.UPDATEREADY) {
         try { ac.swapCache(); } catch (e) {}
         print("update downloaded", "ok");
-        waitForTap("UPDATE READY — tap / press X to reload", function () { location.reload(); });
+        waitForTap("UPDATE READY — tap / press OK to reload", function () { location.reload(); });
     } else {
         print("checking cache...");
         ac.addEventListener("downloading",
@@ -107,12 +107,12 @@
         }, false);
         ac.addEventListener("cached", function () {
             print("cached for offline use", "ok");
-            waitForTap("CACHED — tap / press X to run", go);
+            waitForTap("CACHED — tap / press OK to run", go);
         }, false);
         ac.addEventListener("updateready", function () {
             try { ac.swapCache(); } catch (e) {}
             print("update downloaded", "ok");
-            waitForTap("UPDATE READY — tap / press X to reload",
+            waitForTap("UPDATE READY — tap / press OK to reload",
                        function () { location.reload(); });
         }, false);
         ac.addEventListener("noupdate", function () {
@@ -121,11 +121,11 @@
         }, false);
         ac.addEventListener("error", function () {
             print("cache unavailable");
-            waitForTap("CACHE FAILED — tap / press X to run anyway", go);
+            waitForTap("CACHE FAILED — tap / press OK to run anyway", go);
         }, false);
         ac.addEventListener("obsolete", function () {
             print("cache obsolete");
-            waitForTap("CACHE OBSOLETE — tap / press X to run", go);
+            waitForTap("CACHE OBSOLETE — tap / press OK to run", go);
         }, false);
     }
 })();
