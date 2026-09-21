@@ -1,9 +1,8 @@
 CACHE MANIFEST
 # v1
-# Generated on 2026-09-21 15:18:02.980423
+# Generated on 2026-09-22 01:13:05.719228
 
 CACHE:
-payload2.bin
 rpc_worker.js
 core.js
 jb.js
