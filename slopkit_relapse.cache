@@ -1,0 +1,21 @@
+CACHE MANIFEST
+# v1
+# Generated on 2026-09-22 10:49:09.299957
+
+CACHE:
+rpc_worker.js
+core.js
+jb.js
+ps4_offsets.js
+int64.js
+mem.js
+jb.html
+cache.html
+goldhen.bin
+index.html
+patches/1352.bin
+patches/1302.bin
+patches/1350.bin
+
+NETWORK:
+*
